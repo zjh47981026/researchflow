@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "researchflow"
+version = "1.0.0"
+description = "A checkpointed LangGraph research workflow with evidence verification and human review"
+requires-python = ">=3.12"
+dependencies = ["langgraph==1.2.12", "langgraph-checkpoint-sqlite>=3,<4", "langchain-ollama==1.1.0"]
+
+[project.scripts]
+researchflow = "researchflow.server:main"
+
+[tool.setuptools.package-data]
+researchflow = ["static/*"]
+
+[tool.setuptools.packages.find]
+include = ["researchflow*"]
