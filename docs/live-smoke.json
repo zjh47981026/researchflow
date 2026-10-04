@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-03",
+  "model": "qwen3:4b",
+  "input": "When should I use LangGraph instead of LangChain?",
+  "sources": [
+    "https://docs.langchain.com/oss/python/langgraph/overview.md",
+    "https://docs.langchain.com/oss/python/langchain/overview.md"
+  ],
+  "review_status": "awaiting_review",
+  "final_status": "complete",
+  "gathering_rounds": 1,
+  "verified_quotes": 7,
+  "rejected_quotes": 1,
+  "limitation": "A single live integration smoke test, not an AI accuracy benchmark."
+}
