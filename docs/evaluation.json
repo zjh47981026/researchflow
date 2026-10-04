@@ -1,0 +1,40 @@
+{
+  "kind": "deterministic workflow controls",
+  "passed": 8,
+  "total": 8,
+  "results": [
+    {
+      "check": "Human review blocks drafting",
+      "passed": true
+    },
+    {
+      "check": "SQLite recovery preserves progress",
+      "passed": true
+    },
+    {
+      "check": "Edited outline reaches approved brief",
+      "passed": true
+    },
+    {
+      "check": "Rejection prevents a brief",
+      "passed": true
+    },
+    {
+      "check": "Invalid approval remains recoverable",
+      "passed": true
+    },
+    {
+      "check": "Fabricated quotes are refused",
+      "passed": true
+    },
+    {
+      "check": "Failed fetches stop within budget",
+      "passed": true
+    },
+    {
+      "check": "Evidence gaps trigger another round",
+      "passed": true
+    }
+  ],
+  "limitation": "These checks do not measure model quality, source truth, or semantic claim accuracy."
+}
