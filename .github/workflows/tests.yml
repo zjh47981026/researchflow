@@ -1,0 +1,26 @@
+name: Tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: pip install -e .
+      - run: python -m unittest discover -v
+      - run: python evaluate.py --output evaluation.json
+      - run: node --check researchflow/static/app.js
+      - uses: actions/upload-artifact@v4
+        with:
+          name: workflow-controls-${{ matrix.python }}
+          path: evaluation.json
